@@ -20,6 +20,7 @@ hr {
 }
 
 form {
+  text-align: justify;
   height: fit-content;
   width: fit-content;
   display: block;
