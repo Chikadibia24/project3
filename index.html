@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <link rel="stylesheet" href="./assets/styles/form.css" />
+    <title>ChikaDibia</title>
+  </head>
+  <body>
+    <main>
+      <!--Personal details-->
+      <section id="bio-data-section">
+        <div class="bio-data-sub-section" id="image-div">
+          <div id="no-animate"></div>
+          <img src="./assets/images/ChikaDibia.jpeg" alt="My Picture" />
+        </div>
+
+        <div id="bio-data" class="bio-data-sub-section text">
+          <h1 class="bio-data-info">Ogbu Casmir Chika</h1>
+          <p class="bio-data-info">Male</p>
+          <p class="bio-data-info">Front-End Engineering</p>
+        </div>
+      </section>
+
+      <!--Documentation-->
+      <section class="documentation-section">
+        <div class="text">
+          <h1 class="documentation-text">My Experience About The Training So Far</h1>
+          <p class="documentation-text">
+            The training has been great so far.
+          </p>
+
+          <p class="documentation-text">
+            We have learned some basic and advanced <strong>HTML</strong>,
+            <strong>Git</strong>, and also,
+            <strong>Github</strong> concepts.
+          </p>
+
+          <p class="documentation-text">
+            We have also started <strong>CSS</strong> and have been able to design a sample news letter using some intermediate-level CSS properties such as the <strong>position</strong> and <strong>z-index</strong> properties.
+          </p>
+
+          <p class="documentation-text">
+            The tutors<strong>Adaeze</strong> and
+            <strong>Ifenna</strong> have been excellent. They have showed great passion towards tutoring us and making sure that everyone is carried along in the learning process.
+          </p>
+
+          <p class="documentation-text">
+            The <strong>Enugu SME</strong> and their capable program manager <strong>Mr. Salem</strong> and his deputy <strong>Miss. Cynthia</strong> have also demonstrated great capabilities towards running the program effectively.
+          </p>
+
+          <p class="documentation-text">
+            So far, it has been an exciting experience and I believe it can only get better.
+          </p>
+
+        </div>
+      </section>
+
+      <section class="documentation-section">
+        <div class="text">
+          <h1 id="form-h1">Enter Your Details Below:</h1>
+
+          <hr />
+          <form action="" target="_blank" autocomplete="on">
+            <label for="fname">First Name:</label> <br />
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              placeholder="Enter your first name"
+              required
+              class="non-radio-input"
+            />
+            <br />
+
+            <label for="lname">Last Name:</label> <br />
+            <input
+              type="text"
+              name="lname"
+              id="lname"
+              placeholder="Enter your last name"
+              required
+              class="non-radio-input"
+            />
+            <br />
+
+            <label for="email">Email Address:</label> <br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+              class="non-radio-input"
+            />
+            <br />
+
+            <p id="form-para">Choose your Track:</p>
+            <label for="Front-End">Front-End</label>
+            <input type="radio" name="track" id="Front-End" />
+
+            <label for="Back-End">Back-End</label>
+            <input type="radio" name="track" id="Back-End" />
+            <br />
+
+            <label for="password">Password:</label> <br />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              class="non-radio-input"
+            />
+            <br />
+
+            <label for="uploader">Click to upload your file:</label>
+            <br />
+            <input type="file" name="uploader" id="uploader" />
+            <br />
+
+            <button type="submit" value="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="documentation-section" id="table-section">
+
+        <u><h1>Programming languages, their primary uses and notable features</h1></u>
+          <table>
+            <tr>
+              <th>Programming Language</th>
+              <th>Primary Use</th>
+              <th>Year of Initial Release</th>
+              <th>Notable Features</th>
+            </tr>
+
+            <tr>
+              <td>Java</td>
+              <td>
+                Java is a robust programming language used to build cross
+                platform apps for PCs and also mobiles.Java is also in IOT
+                programming.
+              </td>
+              <td>Java had its first public release in 1995.</td>
+              <td>
+                <ul>
+                  <li>Java incorprates Object Oriented programming.</li>
+                  <li>Java is platform
+                independence.</li>
+                  <li>Java features Automatic Garbage Collection.</li>
+                  <li>Java
+                is also very and configurable.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>JavaScript</td>
+              <td>
+                JavaScript is primarily used to build dynamic and interactive
+                websites and mobile apps.
+              </td>
+              <td>JavaScript was first released in 1995</td>
+              <td>
+                <ul>
+                  <li>JavaScript features Object Oriented and Functional programming.</li>
+                  <li>JavaScript is cross-platform. </li>
+                  <li>JavaScript can be used for both
+                Front-End and Back-End develpment.</li>
+                  <li>JavaScript does not need an
+                environment setup since it is an interpreted language.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Python</td>
+              <td>
+                <ul>
+                  <li>Python is used to build both desktop and web apps.</li>
+                  <li>Python is
+                used data science and data analysis.</li>
+                  <li>Python can also be used for
+                data visualization.</li>
+                </ul>
+              </td>
+              <td>Python's initial release was in 1991</td>
+              <td>
+                <ul>
+                  <li>Python is Free and Open Source.</li>
+                  <li>Python has an easy to read and
+                code simple syntax.</li>
+                  <li>Python features Object Oriented Programming
+                paragdim.</li>
+                  <li>Python is also Easy to Debug.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Kotlin</td>
+              <td><ul>
+                <li>Kotlin is primarily used to develop Android apps.</li>
+                <li>Used
+                for full-stack web development.</li>
+                <li>It is also used for Data
+                Science.</li>
+              </ul>
+              </td>
+
+              <td>
+                The first official release of Kotlin was in February 2016.
+              </td>
+              <td>
+                <ul>
+                  <li>Kotlin is Open-Source.</li>
+                  <li>Kotlin has a simple syntax to make development easy.</li>
+                  <li>Kotlin is secure.</li>
+                  <li>Kotlin integrates seamlessly with Android Studio.</li>
+                  <li>It is also highly compatible with Java.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Swift</td>
+              <td>
+                Swift is primarily used to build iOS and macOS applications.
+              </td>
+              <td>
+                Swift was introduced by Apple in 2014 to replace Objective-C for
+                iOS and macOS development
+              </td>
+              <td>
+                <ul>
+                  <li>Swift is safe and easy-to-use language.</li>
+                  <li>Swift is fast compared to other
+                programming languages.</li>
+                  <li>Swift is a clean and concise programming language.</li>
+                  <li>Swift provides for a singular language for all platforms, not just iOS, but also
+                macOS, watchOS, and tvOS.</li>
+                  <li>Also, Swift is compatible with Linux and Windows
+                servers.</li>
+                </ul>
+                  
+                 
+              </td>
+            </tr>
+          </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with <span>&#10084;</span> by Ogbu Casmir Chika</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,617 @@
+/*create default colors*/
+:root {
+  --bg-color: #fff;
+  --primary-color: #f3f6f9;
+  --secondary-color: #eff2f9;
+  --main-shadow-color: rgb(162, 192, 234);
+}
+
+/*change body element background*/
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--bg-color);
+}
+
+/*style main element*/
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  background-color: var(--primary-color);
+  min-width: auto;
+  max-width: 95%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-bottom: none;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 0 -2px 2px var(--main-shadow-color);
+}
+
+#table-section{
+  grid-column: 1 / span3;
+  grid-row: 2;
+}
+
+/*style section element*/
+section {
+  background-color: var(--secondary-color);
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px var(--main-shadow-color);
+}
+
+/*style bio-data-section element*/
+#bio-data-section {
+  display: block;
+  margin: auto;
+  min-width: 90%;
+  max-width: 95%;
+}
+
+/*style and animate image div*/
+#image-div {
+  margin: auto;
+  margin-top: 70px;
+  height: 215px;
+  width: 215px;
+  display: flex;
+  align-items: center;
+  border: 2px rgb(8, 4, 253) dotted;
+  border-radius: 50%;
+  transition: 0.4s linear;
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+}
+
+/*Animate main element contents*/
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*style and animate img element*/
+img {
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  box-shadow: 0 0 3px 1px rgb(118, 135, 173);
+  border-radius: 50%;
+  transition: 0.4s linear, transform 1s;
+  animation: none;
+}
+
+/*Remove size properties from #no-animate div*/
+#no-animate {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+
+/*Apply "@keyframes fixed"*/
+#no-animate,
+img {
+  animation-name: fixed;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+/*Fix image against animating with img-div*/
+@keyframes fixed {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*create hover behavior for image div element*/
+#image-div:hover {
+  display: flex;
+  align-items: center;
+  height: 265px;
+  width: 265px;
+  border-radius: 50%;
+  transform: rotate(360deg);
+}
+
+/*create hover behavior for image element*/
+img:hover {
+  display: block;
+  margin: auto;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  transform: rotate(-360deg);
+}
+
+/*style and give a bg-color to .text div*/
+.text {
+  text-align: center;
+  background-color: rgb(235, 239, 245);
+  margin: auto;
+  min-width: auto;
+  max-width: 95%;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+
+/*Give 10px margin-top*/
+#bio-data {
+  margin-top: 25px;
+}
+/*style the documentation section*/
+.documentation-section {
+  padding: 10px 10px;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  min-width: 90%;
+  max-width: 95%;
+}
+/*Remove underline from anchor tags*/
+a {
+  text-decoration: none;
+}
+
+/*Style link states*/
+/*Unvisited*/
+a:link {
+  color: #5e9dea;
+}
+/*Visited*/
+a:visited {
+  color: green;
+}
+/*Mouse Hover*/
+a:hover {
+  color: blue;
+}
+/*Active*/
+a:active {
+  color: rgb(152, 6, 178);
+}
+
+/*Style documentation-section div*/
+#documentation-section div {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0 0 5px -1px var(--main-shadow-color);
+}
+
+/*style the footer*/
+footer {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  min-width: auto;
+  max-width: 95%;
+  border-top: none;
+  margin: auto;
+  margin-bottom: 25px;
+  padding: 15px;
+  height: 65px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 2px 2px var(--main-shadow-color);
+}
+
+footer p {
+  display: block;
+  margin: auto;
+}
+span{
+  color: red;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    background-color: var(--primary-color);
+    min-width: 80%;
+    max-width: 95%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 18px 5px;
+    border-bottom: none;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0 -2px 2px var(--main-shadow-color);
+  }
+
+  /*style section element*/
+  section {
+    background-color: var(--secondary-color);
+    margin: 0 auto;
+    min-width: 90%;
+    max-width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px var(--main-shadow-color);
+  }
+  /*style bio-data-section element*/
+  #bio-data-section {
+    display: block;
+    margin: auto;
+    min-width: 90%;
+    max-width: 95%;
+    padding: 0 15px 15px 15px;
+  }
+  /*style and animate image div*/
+  #image-div {
+    margin: auto;
+    margin-top: 80px;
+    height: 215px;
+    width: 215px;
+    display: flex;
+    align-items: center;
+    border: 2px rgb(8, 4, 253) dotted;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+  }
+
+  /*Animate main element contents*/
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*style and animate img element*/
+  img {
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 0 3px 1px rgb(118, 135, 173);
+    border-radius: 50%;
+    transition: 0.4s linear;
+    animation: none;
+  }
+
+  /*Remove size properties from #no-animate div*/
+  #no-animate {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /*Apply "@keyframes fixed"*/
+  #no-animate,
+  img {
+    animation-name: fixed;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+  }
+
+  /*Fix image against animating with img-div*/
+  @keyframes fixed {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #image-div:hover {
+    display: flex;
+    align-items: center;
+    height: 235px;
+    width: 235px;
+    border-radius: 50%;
+  }
+
+  img:hover {
+    display: block;
+    margin: auto;
+    height: 225px;
+    width: 225px;
+    border-radius: 50%;
+  }
+
+  /*style and give a bg-color to .text div*/
+  .text {
+    text-align: center;
+    background-color: rgb(223, 230, 241);
+    margin: auto;
+    min-width: auto;
+    max-width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  /*Give 10px margin-top*/
+  #bio-data {
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  /*style the documentation section*/
+  #documentation-section {
+    padding: 10px 10px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    min-width: 90%;
+    max-width: 95%;
+  }
+
+  /*Remove underline from anchor tags*/
+  a {
+    text-decoration: none;
+  }
+
+  /*Style link states*/
+  /*Unvisited*/
+  a:link {
+    color: #5e9dea;
+  }
+  /*Visited*/
+  a:visited {
+    color: green;
+  }
+  /*Mouse Hover*/
+  a:hover {
+    color: blue;
+  }
+  /*Active*/
+  a:active {
+    color: rgb(152, 6, 178);
+  }
+
+  /*Style documentation-section div*/
+  #documentation-section div {
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 10px;
+  }
+
+  footer {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-top: none;
+    min-width: 80%;
+    max-width: 95%;
+    padding: 0 5px;
+    margin: auto;
+    margin-bottom: 25px;
+    height: 120px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 2px 2px var(--main-shadow-color);
+  }
+
+  footer p {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    background-color: var(--primary-color);
+    min-width: 80%;
+    max-width: 95%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 18px 5px;
+    border-bottom: none;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0 -2px 2px var(--main-shadow-color);
+  }
+
+  /*style section element*/
+  section {
+    background-color: var(--secondary-color);
+    margin: 0 auto;
+    min-width: 90%;
+    max-width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px var(--main-shadow-color);
+  }
+  /*style and animate image div*/
+  #image-div {
+    margin: auto;
+    margin-top: 20px;
+    height: 215px;
+    width: 215px;
+    display: flex;
+    align-items: center;
+    border: 2px rgb(8, 4, 253) dotted;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+  }
+
+  /*Animate main element contents*/
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*style and animate img element*/
+  img {
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 0 3px 1px rgb(118, 135, 173);
+    border-radius: 50%;
+    transition: 0.4s linear;
+    animation: none;
+  }
+
+  /*Remove size properties from #no-animate div*/
+  #no-animate {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /*Apply "@keyframes fixed"*/
+  #no-animate,
+  img {
+    animation-name: fixed;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+  }
+
+  /*Fix image against animating with img-div*/
+  @keyframes fixed {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #image-div:hover {
+    display: flex;
+    align-items: center;
+    height: 235px;
+    width: 235px;
+    border-radius: 50%;
+  }
+
+  img:hover {
+    display: block;
+    margin: auto;
+    height: 225px;
+    width: 225px;
+    border-radius: 50%;
+  }
+
+  /*style and give a bg-color to .text div*/
+  .text {
+    text-align: center;
+    background-color: rgb(223, 230, 241);
+    margin: auto;
+    min-width: auto;
+    max-width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  /*Give 10px margin-top*/
+  #bio-data {
+    margin-top: 20px;
+  }
+
+  /*style the documentation section*/
+  #documentation-section {
+    padding: 10px 10px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    min-width: 90%;
+    max-width: 95%;
+  }
+
+  /*Remove underline from anchor tags*/
+  a {
+    text-decoration: none;
+  }
+
+  /*Style link states*/
+  /*Unvisited*/
+  a:link {
+    color: #5e9dea;
+  }
+  /*Visited*/
+  a:visited {
+    color: green;
+  }
+  /*Mouse Hover*/
+  a:hover {
+    color: blue;
+  }
+  /*Active*/
+  a:active {
+    color: rgb(152, 6, 178);
+  }
+
+  /*Style documentation-section div*/
+  #documentation-section div {
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 10px;
+  }
+
+  footer {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-top: none;
+    min-width: 80%;
+    max-width: 95%;
+    padding: 0 5px;
+    margin: auto;
+    margin-bottom: 25px;
+    height: 120px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 2px 2px var(--main-shadow-color);
+  }
+
+  footer p {
+    display: block;
+    margin: auto;
+  }
+}
